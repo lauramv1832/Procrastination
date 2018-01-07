@@ -9,7 +9,9 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,8 +48,10 @@ public class MainActivity extends Activity {
                             boolean success= jsonObject.getBoolean("success");
                             if (success){
                                 String name=jsonObject.getString("name");
-
-
+                                Intent intent=new Intent(MainActivity.this, UserActivity.class);
+                                intent.putExtra("name",name);
+                                intent.putExtra("username",username);
+                                MainActivity.this.startActivity(intent);
                             }else{
                                 AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
                                 builder.setMessage("Register Failed")
@@ -58,11 +62,12 @@ public class MainActivity extends Activity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        
+
                     }
                 };
-                //LoginRequest loginRequest=new LoginRequest(username, password);
-
+                LoginRequest loginRequest=new LoginRequest(username, password, responseListener);
+                RequestQueue requestQueue= Volley.newRequestQueue(MainActivity.this);
+                requestQueue.add(loginRequest);
 
 
             }
