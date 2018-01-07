@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.EditText;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -22,10 +23,10 @@ public class Register_Activity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_register_);
-        Button register=(Button)findViewById(R.id.Register);
-        final TextView etName=(TextView)findViewById(R.id.Name);
-        final TextView etUsername=(TextView)findViewById(R.id.Username);
-        final TextView etPassword=(TextView)findViewById(R.id.Password);
+        Button register=(Button)findViewById(R.id.bCreateAccount);
+        final EditText etName=(EditText)findViewById(R.id.etName);
+        final EditText etUsername=(EditText)findViewById(R.id.etUsername);
+        final EditText etPassword=(EditText)findViewById(R.id.etPassword);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
