@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
                                 MainActivity.this.startActivity(intent);
                             }else{
                                 AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
-                                builder.setMessage("Register Failed")
+                                builder.setMessage("Incorrect Login Credentials")
                                         .setNegativeButton("Retry", null)
                                         .create()
                                         .show();
