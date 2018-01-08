@@ -2,11 +2,16 @@ package com.example.ikhan.procrastinationapp;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
@@ -23,6 +28,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+
         final TextView etUsername=(TextView)findViewById(R.id.Username);
         final TextView etPassword=(TextView)findViewById(R.id.Password);
         final Button login=(Button)findViewById(R.id.Login);
@@ -73,4 +79,5 @@ public class MainActivity extends Activity {
             }
         });
     }
+
 }
