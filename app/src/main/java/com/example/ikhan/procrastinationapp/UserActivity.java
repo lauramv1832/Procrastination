@@ -36,7 +36,7 @@ public class UserActivity extends Activity {
 
         //switches
 
-        final Button bSave=(Button)findViewById(R.id.bSave);
+        Button bSave=(Button)findViewById(R.id.bSave);
         //bSave.setOnClickListener(new View.OnClickListener(){}
     }
 
