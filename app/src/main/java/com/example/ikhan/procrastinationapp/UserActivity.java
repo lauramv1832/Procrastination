@@ -1,19 +1,13 @@
 package com.example.ikhan.procrastinationapp;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v7.app.AppCompactActivity;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
+
+//import android.support.v7.app.AppCompactActivity;
 
 
 public class UserActivity extends Activity {
@@ -29,7 +23,7 @@ public class UserActivity extends Activity {
         String username=intent.getStringExtra("username");
         String message=name + "'s Apps";
         TextView welcome=(TextView)findViewById(R.id.welcome);
-        welcome.setText(message);
+        //welcome.setText(message);
 
         //GridView gridView = (GridView) findViewById(R.id.gridview);
         //gridView.setAdapter(new ImageAdapter(this));

@@ -4,8 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ikhan.procrastinationapp.UserActivityEdited">
+    tools:context="com.example.ikhan.procrastinationapp.UserActivity">
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/gradient"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,10 +36,12 @@
                     android:id="@+id/welcome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="30dp"
                     android:text="My Apps"
                     android:textAlignment="center"
-                    android:textColor="#f16f7d"
-                    android:textSize="36sp" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -51,7 +62,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="40dp" />
+                    android:padding="40dp"
+                    tools:checked="false" />
 
             </LinearLayout>
 
@@ -65,7 +77,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:src="@drawable/twitter2" />
+                    android:src="@drawable/twitter" />
 
                 <Switch
                     android:id="@+id/sTwitter"
@@ -179,8 +191,10 @@
                 android:id="@+id/bSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/background_login"
                 android:text="Save"
+                android:layout_marginHorizontal="35dp"
                 android:textColor="#f16f7d" />
 
         </LinearLayout>
