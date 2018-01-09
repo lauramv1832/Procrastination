@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 
@@ -21,6 +23,7 @@ public class UserActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_user);
+
         Intent intent=getIntent();
         String name=intent.getStringExtra("name");
         String username=intent.getStringExtra("username");
@@ -28,13 +31,16 @@ public class UserActivity extends Activity {
         TextView welcome=(TextView)findViewById(R.id.welcome);
         welcome.setText(message);
 
-        GridView gridView = (GridView) findViewById(R.id.gridview);
-        gridView.setAdapter(new ImageAdapter(this));
+        //GridView gridView = (GridView) findViewById(R.id.gridview);
+        //gridView.setAdapter(new ImageAdapter(this));
 
+        //switches
 
+        final Button bSave=(Button)findViewById(R.id.bSave);
+        //bSave.setOnClickListener(new View.OnClickListener(){}
     }
 
-    public class ImageAdapter extends BaseAdapter {
+    /*public class ImageAdapter extends BaseAdapter {
         private Context mContext;
 
         public ImageAdapter(Context c){
@@ -63,22 +69,15 @@ public class UserActivity extends Activity {
         }
 
         private Integer[] mThumbIds = {
-                R.drawable.facebook,
-                R.drawable.toggle,
-                R.drawable.twitter2,
-                R.drawable.toggle,
-                R.drawable.instagram,
-                R.drawable.toggle,
-                R.drawable.snapchat,
-                R.drawable.toggle,
-                R.drawable.pinterest,
-                R.drawable.toggle,
-                R.drawable.reddit,
-                R.drawable.toggle,
-                R.drawable.tumblr,
-                R.drawable.toggle
+                R.drawable.facebook, R.drawable.toggle,
+                R.drawable.twitter2, R.drawable.toggle,
+                R.drawable.instagram, R.drawable.toggle,
+                R.drawable.snapchat, R.drawable.toggle,
+                R.drawable.pinterest, R.drawable.toggle,
+                R.drawable.reddit, R.drawable.toggle,
+                R.drawable.tumblr, R.drawable.toggle
         };
 
 
-    }
+    }*/
 }
