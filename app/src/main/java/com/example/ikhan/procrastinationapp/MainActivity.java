@@ -2,16 +2,11 @@ package com.example.ikhan.procrastinationapp;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
@@ -54,9 +49,13 @@ public class MainActivity extends Activity {
                             boolean success= jsonObject.getBoolean("success");
                             if (success){
                                 String name=jsonObject.getString("name");
+                                String apps=jsonObject.getString("apps");
+                                String userID=jsonObject.getString("userID");
                                 Intent intent=new Intent(MainActivity.this, UserActivity.class);
                                 intent.putExtra("name",name);
                                 intent.putExtra("username",username);
+                                intent.putExtra("apps",apps);
+                                intent.putExtra("userID", userID);
                                 MainActivity.this.startActivity(intent);
                             }else{
                                 AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);

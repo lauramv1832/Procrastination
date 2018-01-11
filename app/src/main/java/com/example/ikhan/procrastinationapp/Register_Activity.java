@@ -26,6 +26,7 @@ public class Register_Activity extends Activity {
         final EditText etName=(EditText)findViewById(R.id.etName);
         final EditText etUsername=(EditText)findViewById(R.id.etUsername);
         final EditText etPassword=(EditText)findViewById(R.id.etPassword);
+        final String apps="";
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +59,7 @@ public class Register_Activity extends Activity {
                         }
                     };
 
-                    RegisterRequest registerRequest = new RegisterRequest(name, username, password, responseListener);
+                    RegisterRequest registerRequest = new RegisterRequest(name, username, password, apps, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(Register_Activity.this);
                     queue.add(registerRequest);
                 }
@@ -73,5 +74,7 @@ public class Register_Activity extends Activity {
         });
 
 
+
     }
+
 }

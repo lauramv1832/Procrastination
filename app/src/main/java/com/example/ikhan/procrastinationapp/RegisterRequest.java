@@ -13,12 +13,13 @@ import java.util.Map;
 public class RegisterRequest extends StringRequest {
     private static final String Register_Request_URL="https://comexampleikhanprocrastinationapp.000webhostapp.com/Register.php";
     private Map<String, String>params;
-    public RegisterRequest(String name, String username, String password, Response.Listener<String> listener){
+    public RegisterRequest(String name, String username, String password, String apps, Response.Listener<String> listener){
         super(Method.POST, Register_Request_URL, listener, null);
         params=new HashMap<>();
         params.put("username", username);
         params.put("password", password);
         params.put("name", name);
+        params.put("apps", apps);
 
     }
 

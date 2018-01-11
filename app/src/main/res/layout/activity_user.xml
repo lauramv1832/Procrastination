@@ -4,17 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ikhan.procrastinationapp.UserActivityEdited">
+    tools:context="com.example.ikhan.procrastinationapp.UserActivity">
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:weightSum="3">
+            android:weightSum="3"
+            android:paddingBottom="30dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -27,10 +40,12 @@
                     android:id="@+id/welcome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="30dp"
                     android:text="My Apps"
                     android:textAlignment="center"
-                    android:textColor="#f16f7d"
-                    android:textSize="36sp" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -48,10 +63,12 @@
 
                 <Switch
                     android:id="@+id/sFacebook"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="40dp" />
+                    android:padding="40dp"
+                    android:switchMinWidth="80dp"
+                    tools:checked="false" />
 
             </LinearLayout>
 
@@ -65,14 +82,15 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:src="@drawable/twitter2" />
+                    android:src="@drawable/twitter" />
 
                 <Switch
                     android:id="@+id/sTwitter"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="40dp" />
+                    android:padding="40dp"
+                    android:switchMinWidth="80dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -89,10 +107,11 @@
 
                 <Switch
                     android:id="@+id/sInstagram"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="40dp" />
+                    android:padding="40dp"
+                    android:switchMinWidth="80dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -109,10 +128,11 @@
 
                 <Switch
                     android:id="@+id/sPinterest"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="40dp" />
+                    android:padding="40dp"
+                    android:switchMinWidth="80dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -129,10 +149,11 @@
 
                 <Switch
                     android:id="@+id/sSnapchat"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="40dp" />
+                    android:padding="40dp"
+                    android:switchMinWidth="80dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -149,10 +170,11 @@
 
                 <Switch
                     android:id="@+id/sReddit"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="40dp" />
+                    android:padding="40dp"
+                    android:switchMinWidth="80dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -169,20 +191,22 @@
 
                 <Switch
                     android:id="@+id/sTumblr"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="40dp" />
+                    android:padding="40dp"
+                    android:switchMinWidth="80dp" />
             </LinearLayout>
 
             <Button
-                android:id="@+id/bSave"
+                android:id="@+id/bStart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/background_login"
-                android:text="Save"
-                android:textColor="#f16f7d" />
-
+                android:text="Start"
+                android:textColor="#f16f7d"/>
         </LinearLayout>
     </ScrollView>
 
