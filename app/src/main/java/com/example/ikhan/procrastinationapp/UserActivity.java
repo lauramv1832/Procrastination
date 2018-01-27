@@ -55,8 +55,8 @@ public class UserActivity extends Activity {
                             boolean success = jsonObject.getBoolean("success");
                             if (success) {
                                 //START RUNNING APP
-                                DetectLaunchRunnable detectLaunchRunnable = new DetectLaunchRunnable();
-                                System.out.println(detectLaunchRunnable.getApp());
+//                                DetectLaunchRunnable detectLaunchRunnable = new DetectLaunchRunnable();
+//                                System.out.println(detectLaunchRunnable.getApp());
 
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(UserActivity.this);
